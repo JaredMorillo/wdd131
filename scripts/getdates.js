@@ -17,3 +17,13 @@ function updateLastModified() {
         lastModifiedElement.textContent = formatDate(lastModified);
     }
 }
+
+// Helper function to format the date
+function formatDate(date) {
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    return date.toLocaleDateString(undefined, options);
+}
+
+// Call the functions to update the footer elements
+updateCopyrightYear();
+updateLastModified();
