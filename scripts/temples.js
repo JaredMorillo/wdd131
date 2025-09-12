@@ -1,15 +1,23 @@
-let d = new Date();
-document.getElementById("currentYear").innerHTML = `&copy;${d.getFullYear()}`;
-document.querySelector('#lastModified').textContent = `Last Modification: ${document.lastModified}`;
+// Set current year
+document.getElementById("currentYear").textContent = new Date().getFullYear();
 
-const hambutton = document.querySelector('#hambutton');
+// Set last modified date
+document.getElementById("lastModified").textContent = `Last Modification: ${document.lastModified}`;
+
+// Hamburger menu functionality
+const hambutton = document.getElementById('hambutton');
+const navmenu = document.getElementById('navmenu');
 
 hambutton.addEventListener('click', () => {
-  document.querySelector('h1').classList.toggle('show');
-  document.querySelector('#navmenu').classList.toggle('show');
+  navmenu.classList.toggle('show');
   hambutton.classList.toggle('show');
 });
 
-function toggleActive(element) {
-  element.classList.toggle("active");
-}
+// Navigation active state
+const navLinks = navmenu.querySelectorAll('a');
+navLinks.forEach(link => {
+  link.addEventListener('click', function () {
+    navLinks.forEach(l => l.classList.remove('active'));
+    this.classList.add('active');
+  });
+});

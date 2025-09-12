@@ -11,15 +11,14 @@
   <link rel="stylesheet" href="styles/temples-large.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&display=swap" rel="stylesheet">
   <script defer src="scripts/temples.js"></script>
 </head>
 
 <body>
   <header>
     <h1 class="handler">Temple Album</h1>
-    <a href="#" id="hambutton"></a>
+    <button id="hambutton" aria-label="Open navigation menu"></button>
     <nav id="navmenu">
       <a href="#" onclick="toggleActive(this)" ontouchstart="toggleActive(this)">Home</a>
       <a href="#">Old</a>
@@ -73,7 +72,7 @@
   </main>
 
   <footer>
-    <p><span id="currentYear"></span>  Jared G. Morillo  Ecuador</p>
+    <p>&copy; <span id="currentYear"></span> Jared G. Morillo Ecuador</p>
     <p class="smaller" id="lastModified">Last Modification: 12/09/2025 16:23</p>
   </footer>
 </body>
