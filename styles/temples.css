@@ -74,23 +74,25 @@ nav a:active {
   font-weight: 700;
 }
 
-nav a:hover~#navmenu~#hambutton {
-  background-color: var(---yellow);
+/* Remove or fix this selector, as it does not work as intended */
+/* nav a:hover~#navmenu~#hambutton {
+  background-color: var(--yellow);
   color: #000;
-}
+} */
 
 nav.show {
   width: 100%;
-}
-
-h1.show {
-  display: none;
 }
 
 .show a {
   display: block;
   text-align: center;
 }
+
+/* Remove this unless you want to hide the h1 when nav is open */
+/* h1.show {
+  display: none;
+} */
 
 main {
   max-width: 900px;
